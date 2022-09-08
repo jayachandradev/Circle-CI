@@ -25,7 +25,13 @@ jobs:
       - restore_cache:
           keys:
             - v1-app
-      
+      - run:
+          name: "Install project dependencies"
+          command: dotnet.exe restore
+      - save_cache:
+          key: v1-app
+          paths:
+            - C:\Sample Applications\Altoro Mutual .Net\packages\com.HCL.AppScan.IAST.agent.1.2.3
       
       - run:
           name: "Run HCL AppScan Static Analysis"
