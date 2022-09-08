@@ -31,7 +31,7 @@ jobs:
       - save_cache:
           key: v1-app
           paths:
-            - C:\Sample Applications\Altoro Mutual .Net
+            - C:\Sample Applications\Altoro Mutual .Net\Altoro Mutual.sln
       - run:
           name: "Run Build step"
           command: dotnet.exe publish -c Release -r win-x64
