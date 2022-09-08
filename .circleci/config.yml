@@ -31,7 +31,7 @@ jobs:
       - save_cache:
           key: v1-app
           paths:
-            - C:\Users\circleci\.nuget\packages
+            - C:\Sample Applications\Altoro Mutual .Net
       - run:
           name: "Run Build step"
           command: dotnet.exe publish -c Release -r win-x64
