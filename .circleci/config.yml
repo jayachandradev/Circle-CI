@@ -25,13 +25,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-app
-      - run:
-          name: "Install project dependencies"
-          command: dotnet.exe restore
-      - save_cache:
-          key: v1-app
-          paths:
-            - C:\Sample Applications\Altoro Mutual .Net\Altoro Mutual.sln
+      
       - run:
           name: "Run Build step"
           command: dotnet.exe publish -c Release -r win-x64
